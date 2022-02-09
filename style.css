@@ -1,0 +1,44 @@
+@font-face {
+  font-family: Norse;
+  font-weight: bold;
+  src: url('fonts/Norse-Bold.otf');
+}
+
+html, body { width: 100%; height: 100%; padding: 0; margin: 0; font-family: sans-serif }
+.container { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center }
+.form-container { border-radius: 1rem; display: flex; width: 80%; box-shadow: 0 0 0.5rem #CCC }
+.hero { border-radius: 1rem 0 0 1rem; position: relative; flex: 40%; min-width: 20rem; max-width: 40rem; background: #000 url(images/fern.jpg) no-repeat; background-size: cover }
+.hero h1 { font-family: "Norse", sans-serif; background: transparent url(images/odin-lined.png) no-repeat; background-position: 2rem; background-size: auto 6rem; height: 8rem; line-height: 8rem; text-indent: 8rem; padding: 2rem; background-color: rgba(0, 0, 0, 0.5); color: #FFF; margin: 20% 0 0 0; padding: 0; font-size: 6rem }
+.hero sub { position: absolute; bottom: 0.5rem; width: 100%; text-align: center; color: #FFF; font-size: 0.75rem }
+.hero sub a { color: #FFF }
+.registration { flex: 60%; padding: 4rem 0; background-color: #F5F5F5 }
+.registration h1 { font-size: 1.4rem; margin: 0; padding: 0; font-weight: lighter; text-indent: 0.5rem }
+.registration p { font-family: sans-serif; font-weight: bold; font-size: 1.2rem; line-height: 1.8rem; margin: 0 0 1rem 0; padding: 0 2rem }
+.registration form { margin: 0; padding: 0 }
+.registration form button { background-color: #596D48; color: #FFF; font-weight: bold; padding: 0.65rem 2rem; margin: 2rem; font-size: 1rem; border-radius: 0.25rem; border: none; box-shadow: 0 0.25rem 0.25rem #999 }
+.registration form p { font-size: 1rem; font-weight: normal }
+.registration form p a { text-decoration: none; color: #596D48; font-weight: bold }
+.field-container { box-shadow: 0 0.25rem 0.2rem #CCC; background-color: #FFF; padding: 1rem 2rem }
+.field-container fieldset { border: none; display: flex; justify-content: space-between; width: 100%; }
+.field-container .field { width: 50% }
+.field-container label { text-transform: uppercase; font-size: 0.7rem; display: block }
+.field-container input { width: 80%; display: block; border: 1px solid #E5E7EB; border-radius: 0.25rem; padding: 0.25rem 0.5rem }
+.field-container .field.error input { border-color: #900 }
+.field-container .field.error span { color: #900 }
+.field-container span.error { position: absolute; font-size: 0.75rem }
+.field-container input:focus { border-color: #369; outline: 0 }
+
+@media (max-width: 800px) {
+  .form-container { flex-direction: column }
+  .splash { min-width: auto; flex: 100% }
+  .form { flex: 100% }
+  .hero { border-radius: 1rem 1rem 0 0 }
+  .hero sub { text-align: right; opacity: 0.7; right: 1rem }
+}
+
+@media (max-width: 550px) {
+  .registration { padding: 2rem 0 }
+  fieldset { flex-direction: column }
+  .field { width: 100% !important; margin-bottom: 1rem }
+  .field input { width: 90% }
+}
